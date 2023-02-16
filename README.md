@@ -1,6 +1,37 @@
-# Getting Started with Create React App
+# TO-DO-LIST version 1.1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [TO-DO-LIST version 1.1](#to-do-list-version-11)
+  - [Demo](#demo)
+  - [Introduction](#introduction)
+  - [Technology used](#technology-used)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+    - [`npm run deploy`](#npm-run-deploy)
+
+## Demo
+
+[Website](https://przemek0000.github.io/Module-8/)
+
+## Introduction
+
+![titleImage](public/to-do-list.jpg)
+
+This is updatet version TO-DO-LIST version 1.1 created in react.js library. We can find here everything what is in previous one plus extra some features. These are 2 buttons: first one letting us to hide all done tasks and second, by simple click on it mark all tasks done. (1.1 version doesent include interaction yet)
+
+## Technology used
+
+- HTML
+- CSS
+- JAVASCRIPT ES6+
+- BEM CONVENTION
+- GRID
+- FLEX
+- MEDIA QUERY
+- IMMUTABILITY OBJECTS
+- REACT.JS
 
 ## Available Scripts
 
@@ -39,4 +70,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## `npm run deploy`
+### `npm run deploy`
+
+Script build application first and then upload to server. 
