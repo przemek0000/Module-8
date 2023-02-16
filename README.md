@@ -19,7 +19,7 @@
 
 ![titleImage](public/to-do-list.jpg)
 
-This is updatet version TO-DO-LIST version 1.1 created in react.js library. We can find here everything what is in previous one plus extra some features. These are 2 buttons: first one letting us to hide all done tasks and second, by simple click on it mark all tasks done. (1.1 version doesent include interaction yet)
+This is updated version TO-DO-LIST version 1.1 created in react.js library. We can find here everything what is in previous one plus extra some features. These are 2 buttons: first one letting us to hide all done tasks and second, by simple click on it mark all tasks done. (1.1 version doesent include interaction yet)
 
 ## Technology used
 
