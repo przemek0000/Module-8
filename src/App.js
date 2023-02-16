@@ -6,9 +6,9 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 
 const tasks = [
-    {id: 1, content: "siema", done: true, hide: false},
-    {id: 2, content: "co tam", done: false, hide: false},
-    {id: 3, content: "react.js na dzisiaj ?", done: false, hide: false}
+    {id: 1, content: "nauczyć się HTML/CSS", done: true, hide: false},
+    {id: 2, content: "nauczyć się JS", done: false, hide: false},
+    {id: 3, content: "nauczyć się react.js", done: false, hide: false}
 ];
 let toggleWord = true;
 let disabledTasks = false;
