@@ -1,0 +1,37 @@
+.section__form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .section__form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__input {
+    padding: 5px;
+    border: 2px solid #e6e6e6;
+}
+
+.section__input:focus {
+    border: 2px solid black;
+}
+
+.section__addNewTaskbutton {
+    color: white;
+    font-weight: 100;
+    background-color: hsl(180, 100%, 23%);
+    border: 2px solid hsl(180, 100%, 23%);
+    transition: 0.5s; 
+}
+
+.section__addNewTaskbutton:hover {
+    background-color: hsl(180, 100%, 27%);
+    transform: scale(1.1);
+}
+
+.section__addNewTaskbutton:active {
+    background-color: hsl(180, 100%, 30%);
+}

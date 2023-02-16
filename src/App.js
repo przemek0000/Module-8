@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Form from "./Form"
+import Container from "./Container"
+import Section from "./Section";
+import Tasks from "./Tasks";
+import Buttons from "./Buttons";
+
+const tasks = [
+    {id: 1, content: "siema", done: true, hide: false},
+    {id: 2, content: "co tam", done: false, hide: false},
+    {id: 3, content: "react.js na dzisiaj ?", done: false, hide: false}
+];
+let toggleWord = true;
+let disabledTasks = false;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container>
+            <Header title={"Lista zadań"} />
+            <Section title={"Dodaj nowe zadanie"} type={<Form />} />
+            <Section title={"Lista zadań"} type={<Tasks tasks={tasks} />} buttons={<Buttons tasks={tasks} toggleWord={toggleWord} disabledTasks={disabledTasks}/>}/>
+        </ Container >
+    );
 }
 
 export default App;
