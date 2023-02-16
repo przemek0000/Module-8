@@ -6,9 +6,9 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 
 const tasks = [
-    {id: 1, content: "nauczyć się HTML/CSS", done: true, hide: false},
-    {id: 2, content: "nauczyć się JS", done: false, hide: false},
-    {id: 3, content: "nauczyć się react.js", done: false, hide: false}
+    { id: 1, content: "nauczyć się HTML/CSS", done: true, hide: false },
+    { id: 2, content: "nauczyć się JS", done: false, hide: false },
+    { id: 3, content: "nauczyć się react.js", done: false, hide: false }
 ];
 let toggleWord = true;
 let disabledTasks = false;
@@ -16,9 +16,19 @@ let disabledTasks = false;
 function App() {
     return (
         <Container>
-            <Header title={"Lista zadań"} />
-            <Section title={"Dodaj nowe zadanie"} type={<Form />} />
-            <Section title={"Lista zadań"} type={<Tasks tasks={tasks} />} buttons={<Buttons tasks={tasks} toggleWord={toggleWord} disabledTasks={disabledTasks}/>}/>
+            <Header
+                title={"Lista zadań"}
+            />
+            <Section
+                title={"Dodaj nowe zadanie"}
+                type={<Form />}
+            />
+            <Section
+                title={"Lista zadań"}
+                type={<Tasks tasks={tasks} />}
+                buttons={<Buttons tasks={tasks}
+                    toggleWord={toggleWord}
+                    disabledTasks={disabledTasks} />} />
         </ Container >
     );
 }
