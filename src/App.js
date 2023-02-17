@@ -6,11 +6,11 @@ import Buttons from "./Buttons";
 
 const tasks = [
     { id: 1, content: "nauczyć się HTML/CSS", done: true, hide: false },
-    { id: 2, content: "nauczyć się JS", done: false, hide: false },
+    { id: 2, content: "nauczyć się JS", done: true, hide: false },
     { id: 3, content: "nauczyć się react.js", done: false, hide: false }
 ];
 let toggleWord = true;
-let disabledTasks = false;
+
 
 function App() {
     return (
@@ -27,7 +27,7 @@ function App() {
                 type={<Tasks tasks={tasks} />}
                 buttons={<Buttons tasks={tasks}
                     toggleWord={toggleWord}
-                    disabledTasks={disabledTasks} />}
+                    disabled={tasks.every(({done}) => done)} />}
             />
         </ >
     );

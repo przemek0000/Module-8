@@ -1,13 +1,13 @@
 import "./style.css"
 
-const Buttons = ({ tasks, toggleWord, disabledTasks }) => (
+const Buttons = ({ tasks, toggleWord, disabled }) => (
     tasks.length > 0 && (
         <>
             <button className="hideButton">
                 {`${toggleWord ? "Ukryj " : "Pokaż "}`}
                 ukończone
             </button>
-            <button className="hideButton" disabled={`${disabledTasks? "disabled" : ""}`}>
+            <button className="hideButton" disabled={disabled}>
                 Ukończ wszystkie
             </button>
         </>
