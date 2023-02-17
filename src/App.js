@@ -27,7 +27,8 @@ function App() {
                 type={<Tasks tasks={tasks} />}
                 buttons={<Buttons tasks={tasks}
                     toggleWord={toggleWord}
-                    disabledTasks={disabledTasks} />} />
+                    disabledTasks={disabledTasks} />}
+            />
         </ >
     );
 }
