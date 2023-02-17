@@ -1,4 +1,4 @@
-.hideDoneButton {
+.hideButton {
     padding: 0px;
     font-size: 19px;
     transition: 0.5s;
@@ -7,31 +7,14 @@
     color: hsl(180, 100%, 30%);
 }
 
-.hideDoneButton:hover {
+.hideButton:hover {
     color: hsl(180, 100%, 37%);
 }
 
-.hideDoneButton:active {
+.hideButton:active {
     color: hsl(180, 100%, 40%);
 }
 
-.doneAllButton {
-    padding: 0px;
-    font-size: 19px;
-    transition: 0.5s;
-    border: none;
-    background-color: white;
-    color: hsl(180, 100%, 30%);
-}
-
-.doneAllButton:hover {
-    color: hsl(180, 100%, 37%);
-}
-
-.doneAllButton:active {
-    color: hsl(180, 100%, 40%);
-}
-
-.doneAllButton:disabled {
+.hideButton:disabled {
     color: grey;
 }

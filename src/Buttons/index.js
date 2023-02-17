@@ -3,11 +3,11 @@ import "./style.css"
 const Buttons = ({ tasks, toggleWord, disabledTasks }) => (
     tasks.length > 0 && (
         <>
-            <button className="hideDoneButton">
+            <button className="hideButton">
                 {`${toggleWord ? "Ukryj " : "Pokaż "}`}
                 ukończone
             </button>
-            <button className="doneAllButton" disabled={`${disabledTasks? "disabled" : ""}`}>
+            <button className="hideButton" disabled={`${disabledTasks? "disabled" : ""}`}>
                 Ukończ wszystkie
             </button>
         </>

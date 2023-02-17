@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Form from "./Form"
-import Container from "./Container"
 import Section from "./Section";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -15,7 +14,7 @@ let disabledTasks = false;
 
 function App() {
     return (
-        <Container>
+        <>
             <Header
                 title={"Lista zadań"}
             />
@@ -29,7 +28,7 @@ function App() {
                 buttons={<Buttons tasks={tasks}
                     toggleWord={toggleWord}
                     disabledTasks={disabledTasks} />} />
-        </ Container >
+        </ >
     );
 }
 
