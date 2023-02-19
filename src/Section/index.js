@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Section = ({title, type, buttons}) => (
+const Section = ({title, body, buttons}) => (
     <section className="section">
     <header className="section__header section__header--split ">
         <div>
@@ -11,7 +11,7 @@ const Section = ({title, type, buttons}) => (
         </div>
     </header>
     <div className="section__body">
-        {type}
+        {body}
     </div>
 </section>
 )

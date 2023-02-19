@@ -20,11 +20,11 @@ function App() {
             />
             <Section
                 title={"Dodaj nowe zadanie"}
-                type={<Form />}
+                body={<Form />}
             />
             <Section
                 title={"Lista zadań"}
-                type={<Tasks tasks={tasks} />}
+                body={<Tasks tasks={tasks} />}
                 buttons={<Buttons tasks={tasks}
                     toggleWord={toggleWord}
                     disabled={tasks.every(({done}) => done)} />}
