@@ -13,9 +13,9 @@ const tasks = [
 
 
 function App() {
-    const [toggleDoneTasks, setHideDoneTasks] = useState(false);
+    const [hideDoneTasks, setHideDoneTasks] = useState(false);
     const toggleHideDoneTasks = () => {
-        setHideDoneTasks(toggleDoneTasks => !toggleDoneTasks)
+        setHideDoneTasks(hideDoneTasks => !hideDoneTasks)
     }
 
     return (
@@ -29,9 +29,9 @@ function App() {
             />
             <Section
                 title={"Lista zadań"}
-                body={<Tasks tasks={tasks} toggleDoneTasks={toggleDoneTasks}/>}
+                body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks}/>}
                 buttons={<Buttons tasks={tasks}
-                    toggleDoneTasks={toggleDoneTasks}
+                    hideDoneTasks={hideDoneTasks}
                     disabled={tasks.every(({ done }) => done)} 
                     toggleHideDoneTasks={toggleHideDoneTasks}/>}
             />
