@@ -14,6 +14,10 @@
     border-bottom: 2px solid #e6e6e6;
 }
 
+.task__list--hidden {
+    display: none;
+}
+
 .task__done {
     background-color: hsl(120, 100%, 25%);
     color: white;
