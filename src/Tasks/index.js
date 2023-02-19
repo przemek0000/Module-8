@@ -3,8 +3,7 @@ import "./style.css";
 const Tasks = ({ tasks }) => (
     <ul className="task">
         {tasks.map(task => (
-            <div key={task.id} className="task__underLine" hidden={task.hide ? "hidden" : ""}>
-                <li className="task__list" >
+            <li key={task.id} className="task__list" hidden={task.hide ? "hidden" : ""}>
                 <button className="task__done">
                     {task.done ? "✔" : ""}
                 </button>
@@ -15,7 +14,6 @@ const Tasks = ({ tasks }) => (
                     🗑
                 </button>
             </li>
-            </div>
         ))}
     </ul>
 );

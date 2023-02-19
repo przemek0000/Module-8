@@ -5,19 +5,13 @@
 
 }
 
-.task__underLine {
-    border-bottom: 2px solid #e6e6e6;
-    margin: 0px -5px;
-}
-
 .task__list {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 10px;
     justify-content: center;
-    padding: 0px;
-    margin: 10px 10px;
-
+    padding: 10px 10px;
+    border-bottom: 2px solid #e6e6e6;
 }
 
 .task__done {
