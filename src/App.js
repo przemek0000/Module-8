@@ -9,12 +9,12 @@ import { useState } from "react";
 function App() {
     const [tasks, setTasks] = useState([])
     const [hideDoneTasks, setHideDoneTasks] = useState(false);
-    
+
     const toggleHideDoneTasks = () => {
         setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
     }
 
-    const toggleMarkAllDoneTasks = () => (
+    const markAllDoneTasks = () => (
         setTasks(
             tasks.map(task => (
                 { ...task, done: true }
@@ -67,7 +67,7 @@ function App() {
                     hideDoneTasks={hideDoneTasks}
                     disabled={tasks.every(({ done }) => done)}
                     toggleHideDoneTasks={toggleHideDoneTasks}
-                    toggleMarkAllDoneTasks={toggleMarkAllDoneTasks} />}
+                    markAllDoneTasks={markAllDoneTasks} />}
             />
         </ >
     );
