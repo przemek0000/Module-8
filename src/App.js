@@ -7,11 +7,9 @@ import { useState } from "react";
 
 
 function App() {
-    const [tasks, setTasks] = useState([
-        
-    ])
-
+    const [tasks, setTasks] = useState([])
     const [hideDoneTasks, setHideDoneTasks] = useState(false);
+    
     const toggleHideDoneTasks = () => {
         setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
     }
@@ -57,7 +55,7 @@ function App() {
             />
             <Section
                 title={"Dodaj nowe zadanie"}
-                body={<Form addNewTask={addNewTask}/>}
+                body={<Form addNewTask={addNewTask} />}
             />
             <Section
                 title={"Lista zadań"}
