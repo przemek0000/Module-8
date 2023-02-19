@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Tasks = ({ tasks }) => (
+const Tasks = ({ tasks, toggleDoneTasks }) => (
     <ul className="task">
         {tasks.map(task => (
-            <li key={task.id} className={`task__list ${task.hide ? " task__list--hidden" : ""}`}>
+            <li key={task.id} className={`task__list ${task.done && toggleDoneTasks ? " task__list--hidden" : ""}`}>
                 <button className="task__done">
                     {task.done ? "✔" : ""}
                 </button>

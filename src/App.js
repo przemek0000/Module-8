@@ -3,16 +3,21 @@ import Form from "./Form"
 import Section from "./Section";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
+import { useState } from "react";
 
 const tasks = [
     { id: 1, content: "nauczyć się HTML/CSS", done: true, hide: false },
     { id: 2, content: "nauczyć się JS", done: true, hide: false },
     { id: 3, content: "nauczyć się react.js", done: false, hide: false }
 ];
-let toggleWord = true;
 
 
 function App() {
+    const [toggleDoneTasks, setHideDoneTasks] = useState(false);
+    const toggleHideDoneTasks = () => {
+        setHideDoneTasks(toggleDoneTasks => !toggleDoneTasks)
+    }
+
     return (
         <>
             <Header
@@ -24,10 +29,11 @@ function App() {
             />
             <Section
                 title={"Lista zadań"}
-                body={<Tasks tasks={tasks} />}
+                body={<Tasks tasks={tasks} toggleDoneTasks={toggleDoneTasks}/>}
                 buttons={<Buttons tasks={tasks}
-                    toggleWord={toggleWord}
-                    disabled={tasks.every(({done}) => done)} />}
+                    toggleDoneTasks={toggleDoneTasks}
+                    disabled={tasks.every(({ done }) => done)} 
+                    toggleHideDoneTasks={toggleHideDoneTasks}/>}
             />
         </ >
     );
