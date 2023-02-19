@@ -1,13 +1,13 @@
 import "./style.css"
 
-const Buttons = ({ tasks, hideDoneTasks, disabled, toggleHideDoneTasks }) => (
+const Buttons = ({ tasks, hideDoneTasks, disabled, toggleHideDoneTasks, toggleMarkAllDoneTasks }) => (
     tasks.length > 0 && (
         <>
-            <button className="hideButton" onClick={toggleHideDoneTasks}>
+            <button className="hideButtons" onClick={toggleHideDoneTasks}>
                 {`${hideDoneTasks ? "Pokaż " : "Ukryj "}`}
                 ukończone
             </button>
-            <button className="hideButton" disabled={disabled}>
+            <button className="hideButtons" onClick={toggleMarkAllDoneTasks} disabled={disabled}>
                 Ukończ wszystkie
             </button>
         </>

@@ -5,18 +5,37 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import { useState } from "react";
 
-const tasks = [
-    { id: 1, content: "nauczyć się HTML/CSS", done: true, hide: false },
-    { id: 2, content: "nauczyć się JS", done: true, hide: false },
-    { id: 3, content: "nauczyć się react.js", done: false, hide: false }
-];
-
 
 function App() {
+    const [tasks, setTasks] = useState([
+        { id: 1, content: "nauczyć się HTML/CSS", done: true },
+        { id: 2, content: "nauczyć się JS", done: true },
+        { id: 3, content: "nauczyć się react.js", done: false }
+    ])
+
     const [hideDoneTasks, setHideDoneTasks] = useState(false);
     const toggleHideDoneTasks = () => {
-        setHideDoneTasks(hideDoneTasks => !hideDoneTasks)
+        setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
     }
+
+    const toggleMarkAllDoneTasks = () => (
+        setTasks(
+            tasks.map(task => (
+                { ...task, done: true }
+            ))
+        )
+    )
+
+    const toggleDoneTask = (id) => (
+        setTasks(tasks => tasks.map(task => {
+            if (task.id === id) {
+               return {
+                ...task, done: !task.done
+               }
+            }
+            return {...task}
+        }))
+    )
 
     return (
         <>
@@ -29,11 +48,14 @@ function App() {
             />
             <Section
                 title={"Lista zadań"}
-                body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks}/>}
+                body={<Tasks tasks={tasks}
+                    hideDoneTasks={hideDoneTasks}
+                    toggleDoneTask={toggleDoneTask} />}
                 buttons={<Buttons tasks={tasks}
                     hideDoneTasks={hideDoneTasks}
-                    disabled={tasks.every(({ done }) => done)} 
-                    toggleHideDoneTasks={toggleHideDoneTasks}/>}
+                    disabled={tasks.every(({ done }) => done)}
+                    toggleHideDoneTasks={toggleHideDoneTasks}
+                    toggleMarkAllDoneTasks={toggleMarkAllDoneTasks} />}
             />
         </ >
     );
