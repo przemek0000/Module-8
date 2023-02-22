@@ -1,6 +1,6 @@
 import "./style.css"
 
-const Header = ({title}) => (
+const Header = ({ title }) => (
     <h1 className="body__header">{title}</h1>
 )
 
