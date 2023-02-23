@@ -6,8 +6,9 @@ const Form = ({ addNewTask }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        if (readInput !== "") {
-            addNewTask(readInput.trim());
+        const trimReadInput = readInput.trim();
+        if (trimReadInput !== "") {
+            addNewTask(trimReadInput);
             setReadInput("");
         }
     }
