@@ -7,11 +7,8 @@ import { useState } from "react";
 
 
 function App() {
-    const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) ? JSON.parse(localStorage.getItem("tasks")) : []);
-    const [hideDoneTasks, setHideDoneTasks] = useState(localStorage.getItem("hideDoneTasks") ? localStorage.getItem("hideDoneTasks") : false);
-
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    localStorage.setItem("hideDoneTasks", hideDoneTasks);
+    const [tasks, setTasks] = useState([])
+    const [hideDoneTasks, setHideDoneTasks] = useState(false);
 
     const toggleHideDoneTasks = () => {
         setHideDoneTasks(hideDoneTasks => !hideDoneTasks);
@@ -48,6 +45,8 @@ function App() {
             id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
         }]
         ))
+
+
 
     return (
         <>
